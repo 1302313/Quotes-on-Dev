@@ -63,11 +63,11 @@ function qod_scripts()
 	wp_enqueue_style('qod-style', get_stylesheet_uri());
 
 
-	wp_enqueue_script('jquery');
-	wp_enqueue_script('qod-script', get_template_directory_uri() . '/build/js/qod.min.js', array(), array('jquery'), true);
+	wp_enqueue_style('jquery');
+	wp_enqueue_script('qod-script', get_template_directory_uri() . '/build/js/qod.min.js', array('jquery'), '', true);
 
-	wp_localize_script($qod - script, $qod_api . array(
-		'rest-url' => esc_url_raw(rest_url()),
+	wp_localize_script('qod-script', 'qod_api', array(
+		'rest_url' => esc_url_raw(rest_url()),
 		'wpapi_nonce' => wp_create_nonce('wp_rest'),
 		'post_id' => get_the_ID()
 	));

@@ -1,4 +1,5 @@
 <?php
+
 /**
  * The template for displaying the footer.
  *
@@ -7,16 +8,17 @@
 
 ?>
 
-			</div><!-- #content -->
+</div><!-- #content -->
 
-			<footer id="colophon" class="site-footer" role="contentinfo">
-				<div class="site-info">
-					<a href="<?php echo esc_url( 'https://wordpress.org/' ); ?>"><?php printf( esc_html( 'Proudly powered by %s' ), 'WordPress' ); ?></a>
-				</div><!-- .site-info -->
-			</footer><!-- #colophon -->
-		</div><!-- #page -->
+<footer id="colophon" class="site-footer" role="contentinfo">
+	<div class="site-info">
+		<a href="<?php echo esc_url('https://redacademy.com/'); ?>"><?php printf(esc_html('COPYRIGHT &copy; 2019 %s'), '"Quotes" on Dev_'); ?></a>
+	</div><!-- .site-info -->
+</footer><!-- #colophon -->
+</div><!-- #page -->
 
-		<?php wp_footer(); ?>
+<?php wp_footer(); ?>
 
-	</body>
+</body>
+
 </html>
