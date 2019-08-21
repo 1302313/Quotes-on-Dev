@@ -40,7 +40,7 @@ get_header(); ?>
 
                     <div>
                         <label for="quote-source-url">Provide the link to the Quote source</label>
-                        <textarea name="quoteSourceUrl" id="quote-source-url" cols="20" rows="3" required></textarea>
+                        <input type="url" name="quoteSourceUrl" id="quote-source-url">
                     </div>
 
                     <input type="submit" value="Submit Quote">

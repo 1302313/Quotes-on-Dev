@@ -12,7 +12,11 @@
 
 <footer id="colophon" class="site-footer" role="contentinfo">
 	<div class="site-info">
-		<a href="<?php echo esc_url('https://redacademy.com/'); ?>"><?php printf(esc_html('COPYRIGHT &copy; 2019 %s'), '"Quotes" on Dev_'); ?></a>
+		<?php echo ('COPYRIGHT &copy; 2019') ?>
+
+		<a href="<?php echo esc_url('https://redacademy.com/'); ?>">
+			<?php echo '"Quotes" on Dev_'; ?>
+		</a>
 	</div><!-- .site-info -->
 </footer><!-- #colophon -->
 </div><!-- #page -->

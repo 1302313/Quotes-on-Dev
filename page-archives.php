@@ -47,7 +47,7 @@ get_header(); ?>
             </div>
 
             <div class="page-archives-tags">
-                <h2>Categories</h2>
+                <h2>Tags</h2>
                 <!-- The Tag Loop -->
 
                 <?php
@@ -56,7 +56,7 @@ get_header(); ?>
                     'smallest' => 1,
                     'largest' => 1,
                     'unit' => 'rem',
-                    'smallest' => 'list'
+                    'format' => 'list'
                 );
                 // Add Tag List
                 wp_tag_cloud($args);
