@@ -37,7 +37,7 @@
 
 		<div>
 
-		<img src="<?php eco get_template ?>" alt="">
+			<img src="" alt="Quotes on Dev Logo">
 		</div>
 
 
