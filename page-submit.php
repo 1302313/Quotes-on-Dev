@@ -14,6 +14,7 @@ get_header(); ?>
         <?php while (have_posts()) : the_post(); ?>
 
         <section class="quote-submission">
+
             <header class="entry-header page-submit-header">
                 <h1 class="page-submit-header-title"></h1>
             </header>
@@ -62,7 +63,7 @@ get_header(); ?>
 
         </section>
 
-        <?php endwhile; // End of the loop. 
+        <?php endwhile; // End of while loop. 
         ?>
 
     </main><!-- #main -->

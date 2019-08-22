@@ -19,6 +19,7 @@
 
         // If Successfull
         .done(function(data) {})
+
         .fail(function(err) {});
     });
 

@@ -18,7 +18,7 @@ get_header(); ?>
             </header>
             <div class="page-archives-posts-container">
                 <h2>Quote Authors</h2>
-                <!-- The Loop -->
+                <!-- The Post Loop -->
                 <ul>
                     <?php
                     $posts = get_posts('posts_per_page=-1');
