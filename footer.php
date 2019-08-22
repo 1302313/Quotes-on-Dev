@@ -19,11 +19,13 @@
 		</nav><!-- #site-navigation -->
 
 
-		<div class="copyright">
-			<?php echo ('COPYRIGHT &copy; 2019'); ?>
-			<a href="<?php echo 'https://redacademy.com/'; ?>">
-				<?php echo '"Quotes" on Dev_'; ?>
-			</a>
+		<div class="copyright-container">
+			<div class="copyright">
+				<?php echo ('COPYRIGHT &copy; 2019'); ?>
+				<a href="<?php echo 'https://redacademy.com/'; ?>">
+					<?php echo '"Quotes" on Dev_'; ?>
+				</a>
+			</div>
 		</div>
 
 	</div><!-- .site-info -->

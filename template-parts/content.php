@@ -24,18 +24,20 @@ $source_url = 	get_post_meta(get_the_ID(), '_qod_quote_source_url', true);
 		</h2>
 		<!-- Check if source URL exists -->
 		<?php if ($source && $source_url) : ?>
-		<span class="source">,
+
+		<span class="source source-url">,
 			<a href="<?php echo $source_url; ?>"> <?php echo $source; ?> </a>
 		</span>
 		<!-- else, Check if source exists -->
 		<?php elseif ($source) : ?>
+
 		<span class="source">,
 			<?php echo $source; ?>
 		</span>
-		<!-- else, no surce -->
+		<!-- else, no source -->
 		<?php else : ?>
-		<span class="source">
 
+		<span class="source">
 		</span>
 
 		<?php endif; ?>
