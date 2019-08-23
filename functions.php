@@ -71,7 +71,7 @@ function qod_scripts()
 		'rest_url' => esc_url_raw(rest_url()), // Wp-JSon
 		'wpapi_nonce' => wp_create_nonce('wp_rest'), // Authenticate
 		'post_id' => get_the_ID(),
-		'home-url' => esc_url_raw(home_url())
+		'home_url' => esc_url_raw(home_url()) // Link to home url
 	));
 
 	wp_enqueue_script('qod-starter-navigation', get_template_directory_uri() . '/build/js/navigation.min.js', array(), '20151215', true);

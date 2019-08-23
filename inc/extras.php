@@ -58,10 +58,10 @@ function qod_modify_archives($query)
         $query->set('orderby', 'rand');
         $query->set('posts_per_page', 1);
     }
-    // modify categories and default archives
+    // modify categories and tags and default archives
     if (
         (is_archive()) && !is_admin() && $query->is_main_query()
     ) {
-        $query->set('posts_per_page', 5);
+        $query->set('posts_per_page', 1);
     }
 }
