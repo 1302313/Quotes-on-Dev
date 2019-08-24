@@ -2,6 +2,39 @@
 # Content
 --------------------------------------------------------------*/
 
+
+/* Main Brand Quotes */
+
+.site-content {
+	@include desktop {
+		// margin: ($base__space-unit * 3) 3rem $base__space-unit;
+		position: relative;
+
+		.entry-content {
+
+			&:before,
+			&:after {
+				color: $color__main-brand;
+				font-family: 'FontAwesome';
+				font-size: 5rem;
+				line-height: 1rem;
+				position: absolute;
+				top: 0;
+			}
+
+			&:before {
+				content: '\f10d';
+				left: -4rem;
+			}
+
+			&:after {
+				content: '\f10e';
+				right: -4rem;
+			}
+		}
+	}
+}
+
 /* Posts and pages */
 
 .sticky {
@@ -12,7 +45,7 @@
 	margin: 0 0 $base__space-unit;
 }
 
-.updated:not(.published){
+.updated:not(.published) {
 	display: none;
 }
 
@@ -21,10 +54,56 @@
 	display: inline;
 }
 
+.blog {
+	.entry-content {
+		margin-top: $base__space-unit * 2;
+	}
+}
+
+.page {
+	.entry-title {
+		margin-top: $base__space-unit * 2;
+	}
+}
+
 .page-content,
 .entry-content,
 .entry-summary {
 	margin: $base__space-unit 0 0;
+}
+
+.blog,
+.single,
+.archive {
+	.entry-content {
+		p {
+			font-size: 1.25rem;
+
+			@include tablet {
+				font-size: 1.75rem;
+			}
+
+			@include desktop {
+				font-size: 2.5rem;
+			}
+		}
+	}
+
+	.entry-meta {
+		margin-bottom: ($base__space-unit * 2);
+	}
+
+	.entry-title {
+		display: inline;
+		font-size: 1.25rem;
+		font-weight: normal;
+		margin-bottom: 0;
+	}
+
+	.source {
+		font-size: 1.25rem;
+		font-style: italic;
+	}
 }
 
 .page-links {

@@ -62,10 +62,12 @@ function qod_scripts()
 {
 	// Add Styles to Header
 	wp_enqueue_style('qod-style', get_stylesheet_uri());
+	wp_enqueue_style('qod-font', '/qod/fonts/stylesheet.css');
 	// Add Scripts to Header
 	wp_enqueue_script('jquery');
 	wp_enqueue_script('qod-script', get_template_directory_uri() . '/build/js/qod.min.js', array('jquery'), '', true);
 	wp_enqueue_script('font-awesome', 'https://use.fontawesome.com/99845e9ab8.js');
+
 	// Localize a chosen Global JavaScript object
 	wp_localize_script('qod-script', 'qod_api', array(
 		'rest_url' => esc_url_raw(rest_url()), // Wp-JSon
@@ -77,7 +79,7 @@ function qod_scripts()
 	wp_enqueue_script('qod-starter-navigation', get_template_directory_uri() . '/build/js/navigation.min.js', array(), '20151215', true);
 	wp_enqueue_script('qod-starter-skip-link-focus-fix', get_template_directory_uri() . '/build/js/skip-link-focus-fix.min.js', array(), '20151215', true);
 }
-add_action('wp_enqueue_scripts', 'qod_scripts');
+add_action('wp_enqueue_scripts', 'qod_scripts', 'font-awesome');
 
 /**
  * Custom functions that act independently of the theme templates.

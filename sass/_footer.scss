@@ -7,44 +7,73 @@ footer {
         display: flex;
         flex-direction: column;
         align-items: center;
+        margin: ($base__space-unit * 3) 0 ($base__space-unit * 2);
 
+        @include tablet {
+            flex-flow: row wrap;
+            display: flex;
+            align-items: center;
+
+
+            .main-navigation {
+                flex: 24%;
+                display: flex;
+                justify-content: flex-end;
+
+                ul {
+
+                    li {
+                        border-right: 1px solid #fff;
+                    }
+                }
+
+                .copyright-container {
+                    flex: 50%;
+
+                    .copyright {}
+                }
+
+
+            }
+        }
 
         .main-navigation {
-
-
 
             ul {
                 display: flex;
                 justify-content: flex-start;
                 align-items: center;
-                padding: 0.5rem;
-                width: 100%;
+                margin: 1rem 0 0.5rem;
 
-                // flex: 50%;
-                li {
-                    margin: 0.5rem;
+                li:last-child {
+                    border: 0;
                 }
+
+                li {
+                    margin-right: $base__space-unit - 0.5;
+                    border-right: 1px solid #fff;
+                    padding-right: $base__space-unit - 0.5;
+                }
+
             }
         }
 
         .copyright-container {
             width: 100%;
-            padding: 0.5rem;
-            display: flex;
-            justify-content: flex-end;
-            align-items: center;
+            margin: 0.5rem 0 0rem;
 
             .copyright {
                 width: 100%;
-                margin: 0.5rem;
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
 
-                // flex: 20%;
                 a {
                     margin-left: 0.5rem;
                 }
             }
 
         }
-
     }
+
 }

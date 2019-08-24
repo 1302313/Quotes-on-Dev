@@ -10,7 +10,6 @@
 $source = 		get_post_meta(get_the_ID(), '_qod_quote_source', true);
 $source_url = 	get_post_meta(get_the_ID(), '_qod_quote_source_url', true);
 
-
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
@@ -19,21 +18,24 @@ $source_url = 	get_post_meta(get_the_ID(), '_qod_quote_source_url', true);
 	</div>
 	<!-- Post Meta -->
 	<div class="entry-meta">
-		<h2 class="entry-title">
+		<h2 class="entry-author">&mdash;
 			<?php the_title(); ?>
 		</h2>
+
 		<!-- Check if source URL exists -->
 		<?php if ($source && $source_url) : ?>
 
-		<span class="source source-url">,
-			<a href="<?php echo $source_url; ?>"> <?php echo $source; ?> </a>
+		<span>,
+			<a class="source" href="<?php echo $source_url; ?>"> <?php echo $source; ?> </a>
 		</span>
+
 		<!-- else, Check if source exists -->
 		<?php elseif ($source) : ?>
 
 		<span class="source">,
 			<?php echo $source; ?>
 		</span>
+
 		<!-- else, no source -->
 		<?php else : ?>
 

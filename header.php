@@ -28,15 +28,11 @@
 				<h1 class="site-title screen-reader-text"><a href="<?php echo esc_url(home_url('/')); ?>" rel="home"><?php bloginfo('name'); ?></a></h1>
 				<!-- <p class="site-description"><?php bloginfo('description'); ?></p> -->
 			</div><!-- .site-branding -->
-			<div>
+			<div class="logo-container">
 				<a href="<?php echo home_url('/'); ?>">
-					<img src="<?php echo get_template_directory_uri(); ?>/images/qod-logo.svg" alt="Quotes on Dev Logo">
+					<img class="logo" src="<?php echo get_template_directory_uri(); ?>/images/qod-logo.svg" alt="Quotes on Dev Logo">
 				</a>
 			</div>
 		</header><!-- #masthead -->
-
-
-
-
-
+		<!-- Start of Site Content -->
 		<div id="content" class="site-content">

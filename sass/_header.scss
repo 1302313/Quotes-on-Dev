@@ -1,0 +1,23 @@
+.site-header {
+    margin-top: $base__space-unit * 2;
+}
+
+.logo-container {
+    display: flex;
+    flex-flow: row wrap;
+
+    .logo {
+        width: 19rem;
+        justify-self: flex-end;
+
+        @include tablet {
+            width: 32rem;
+        }
+
+        @include desktop {
+            margin: 0 auto;
+            width: 44rem;
+            justify-self: center;
+        }
+    }
+}

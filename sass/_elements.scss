@@ -5,6 +5,7 @@
 html {
   box-sizing: border-box;
   font-size: 1rem;
+  height: 100vh;
 }
 
 *,
@@ -15,12 +16,13 @@ html {
 }
 
 body {
-  background: $color__background-body; /* Fallback for when there is no custom background color defined. */
+  background: $color__background-body;
+  /* Fallback for when there is no custom background color defined. */
 }
 
 blockquote,
 q {
-  quotes: '' '';
+  quotes: '''';
 
   &:before,
   &:after {
@@ -48,8 +50,8 @@ ol {
   list-style: decimal;
 }
 
-li > ul,
-li > ol {
+li>ul,
+li>ol {
   margin-bottom: 0;
   margin-left: $base__space-unit;
 }
@@ -63,8 +65,10 @@ dd {
 }
 
 img {
-  height: auto; /* Make sure images are scaled correctly. */
-  max-width: 100%; /* Adhere to container width. */
+  height: auto;
+  /* Make sure images are scaled correctly. */
+  max-width: 100%;
+  /* Adhere to container width. */
 }
 
 table {

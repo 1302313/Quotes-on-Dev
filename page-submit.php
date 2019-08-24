@@ -21,7 +21,6 @@ get_header(); ?>
 
             <?php if (is_user_logged_in() && current_user_can('edit_posts')) : ?>
             <div class="page-submit-submission-wrapper">
-
                 <form id="quote-submission-form" name="quoteForm">
 
                     <div>
@@ -47,16 +46,15 @@ get_header(); ?>
                     <input type="submit" value="Submit Quote">
 
                 </form>
-
             </div>
 
             <?php else : ?>
-            <p> Sorry, you must be logged in to submit a quote:( </p>
+
+            <p> Sorry, you must be logged in to submit a quote :( </p>
             <p>
                 <a href="<?php echo wp_login_url() ?>">
-
+                    Login in Here
                 </a>
-
             </p>
 
             <?php endif; ?>

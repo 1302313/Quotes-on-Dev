@@ -1,11 +1,15 @@
 (function($) {
   // DocumentReady
   $(function() {
-    // History API page variable
+    // Variables
 
     let lastPage = document.URL;
-
     const $mainButton = $('#new-quote-button');
+    const $mainButton = $('#new-quote-button');
+    //Add history API popstate for forward and back buttons in the browser
+    $(window).on('popstate', function() {
+      window.location.replace(lastPage);
+    });
 
     // 1: Get Request for wp/v2/posts
     $mainButton.on('click', function(event) {
@@ -23,20 +27,21 @@
 
         // If Successfull
         .done(function(data) {
-          // Post data from wp-json
+          // Variable: Post data from wp-json
           const post = data[0];
-          ///$('entry-content)'.html(var.content.rendered)
-          // author.html('-' + var.title.rendered)
-          //if var._qod_quote_source && URL _qod_quote_source_url
-          // Source dom.html
-          <div> source url</div>;
+
+          if (post._qod_quote_source && post._qod_quote_source_url) {
+            $('.entry-content').html(post.content.rendered);
+            $('.entry-author').html(post.title.rendered);
+            $('.source').html(post._qod_quote_source.rendered);
+            $('.source').html(post._qod_quote_source_url.rendered);
+          }
+          // if (post._qod_quote_source && post._qod_quote_source_url)
 
           // History API get the url slug
           const slug = post.slug;
-          console.log(slug);
           // Add URL with home_url and slug
           const url = qod_api.home_url + '/' + slug + '/';
-          console.log(url);
 
           // Update the browser URL with history.pushState()
           history.pushState(null, null, url);
@@ -47,10 +52,6 @@
         });
     });
 
-    //Add history API popstate for forward and back buttons in the browser
-    $(window).on('popstate', function() {
-      window.location.replace(lastPage);
-    });
     // 2: Post Request for wp/v2/posts
   }); // END of DOCUMENT READY
 })(jQuery); // The END
