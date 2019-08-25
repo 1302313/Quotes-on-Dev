@@ -8,13 +8,13 @@
 
 get_header(); ?>
 
-<div id="primary" class="content-area">
+<div id="primary" class="page-about">
     <main id="main" class="site-main" role="main">
 
         <?php while (have_posts()) : the_post(); ?>
 
         <!-- About Page Title -->
-        <h2> <?php the_title() ?> </h2>
+        <h1> <?php the_title() ?> </h1>
 
         <!-- About Page Information -->
         <div class="about-info">

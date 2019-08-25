@@ -6,6 +6,34 @@
 
 /* About Page */
 
+.page-about {
+
+    margin: 0 2rem;
+
+    &:before,
+    &:after {
+        color: $color__main-brand;
+        font-family: 'FontAwesome';
+        font-size: 8rem;
+        line-height: 1rem;
+        position: absolute;
+        top: 0;
+    }
+
+    &:before {
+        content: '\f10d';
+        left: -9rem;
+        top: 5rem;
+    }
+
+    &:after {
+        content: '\f10e';
+        right: -9rem;
+        top: 5rem;
+    }
+}
+
+
 /* Single Quote Page */
 
 .single-post-navigation {
@@ -15,10 +43,10 @@
         .nav-links {
             display: flex;
             flex-flow: row wrap;
-            justify-content: flex-start;
+            justify-content: space-around;
 
             .nav-previous {
-                width: 25%;
+
 
                 &:before {
                     content: quote($string: "Previous => ");
@@ -27,7 +55,7 @@
             }
 
             .nav-next {
-                width: 25%;
+
 
                 &:before {
                     content: quote($string: "Next => ");

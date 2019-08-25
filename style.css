@@ -602,6 +602,12 @@ a {
   width: 50%; }
 
 /* Site Footer Design */
+@media (min-width: 1080px) {
+  footer {
+    -ms-flex-item-align: end;
+        align-self: flex-end;
+    margin-right: 1.5rem; } }
+
 footer .site-info {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -738,6 +744,11 @@ footer .site-info {
           flex-flow: column wrap;
   -ms-flex-pack: distribute;
       justify-content: space-around; }
+  @media (min-width: 1080px) {
+    .container {
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center; } }
 
 /*--------------------------------------------------------------
 # Clearings
@@ -753,7 +764,7 @@ footer .site-info {
 /* Main Brand Quotes */
 @media (min-width: 1080px) {
   .site-content {
-    margin: 4.5rem 15rem 1.5rem;
+    margin: 2.25rem 10rem 1.5rem;
     position: relative;
     font-family: 'Exo'; }
     .site-content .entry-content:before, .site-content .entry-content:after {
@@ -768,6 +779,21 @@ footer .site-info {
       left: -9rem;
       top: 6.5rem; }
     .site-content .entry-content:after {
+      content: '\f10e';
+      right: -9rem;
+      top: 6.5rem; }
+    .site-content .content-area:before, .site-content .content-area:after {
+      color: #0c0;
+      font-family: 'FontAwesome';
+      font-size: 8rem;
+      line-height: 1rem;
+      position: absolute;
+      top: 0; }
+    .site-content .content-area:before {
+      content: '\f10d';
+      left: -9rem;
+      top: 6.5rem; }
+    .site-content .content-area:after {
       content: '\f10e';
       right: -9rem;
       top: 6.5rem; } }
@@ -836,8 +862,14 @@ footer .site-info {
 .archive .entry-title {
   display: inline;
   font-size: 1.25rem;
-  font-weight: normal;
+  font-weight: 400;
   margin-bottom: 0; }
+
+.blog .entry-author,
+.single .entry-author,
+.archive .entry-author {
+  font-size: 1.25rem;
+  font-weight: 400; }
 
 .blog .source,
 .single .source,
@@ -848,6 +880,39 @@ footer .site-info {
 .page-links {
   clear: both;
   margin: 0 0 1.5rem; }
+
+.page-archives-posts,
+.page-archives-categories,
+.page-archives-tags {
+  font-family: 'Exo', sans-serif; }
+  .page-archives-posts ul,
+  .page-archives-categories ul,
+  .page-archives-tags ul {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap; }
+    .page-archives-posts ul li,
+    .page-archives-categories ul li,
+    .page-archives-tags ul li {
+      font-size: 1rem;
+      margin-bottom: 0.5rem;
+      margin-right: 0.75rem; }
+      @media (min-width: 620px) {
+        .page-archives-posts ul li,
+        .page-archives-categories ul li,
+        .page-archives-tags ul li {
+          font-size: 1.25rem; } }
+
+@media (min-width: 620px) {
+  .tag-cloud-link {
+    font-size: 1.25rem !important; } }
 
 /*--------------------------------------------------------------
 # Media
@@ -871,6 +936,24 @@ object {
 --------------------------------------------------------------*/
 /* All Archives Page */
 /* About Page */
+.page-about {
+  margin: 0 2rem; }
+  .page-about:before, .page-about:after {
+    color: #0c0;
+    font-family: 'FontAwesome';
+    font-size: 8rem;
+    line-height: 1rem;
+    position: absolute;
+    top: 0; }
+  .page-about:before {
+    content: '\f10d';
+    left: -9rem;
+    top: 5rem; }
+  .page-about:after {
+    content: '\f10e';
+    right: -9rem;
+    top: 5rem; }
+
 /* Single Quote Page */
 .single-post-navigation .post-navigation .nav-links {
   display: -webkit-box;
@@ -880,18 +963,13 @@ object {
   -webkit-box-direction: normal;
       -ms-flex-flow: row wrap;
           flex-flow: row wrap;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start; }
-  .single-post-navigation .post-navigation .nav-links .nav-previous {
-    width: 25%; }
-    .single-post-navigation .post-navigation .nav-links .nav-previous:before {
-      content: "Previous => ";
-      color: #86e358; }
-  .single-post-navigation .post-navigation .nav-links .nav-next {
-    width: 25%; }
-    .single-post-navigation .post-navigation .nav-links .nav-next:before {
-      content: "Next => ";
-      color: #86e358; }
+  -ms-flex-pack: distribute;
+      justify-content: space-around; }
+  .single-post-navigation .post-navigation .nav-links .nav-previous:before {
+    content: "Previous => ";
+    color: #86e358; }
+  .single-post-navigation .post-navigation .nav-links .nav-next:before {
+    content: "Next => ";
+    color: #86e358; }
 
 /* Submit a Quote Page */

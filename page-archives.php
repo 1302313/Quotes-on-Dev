@@ -18,7 +18,7 @@ get_header(); ?>
             </header>
 
             <!-- Page Archives Post Container -->
-            <div class="page-archives-posts-container">
+            <div class="page-archives-posts">
 
                 <h2>Quote Authors</h2>
 

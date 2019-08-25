@@ -3,6 +3,11 @@
 // Main Navigation Block
 
 footer {
+    @include desktop {
+        align-self: flex-end;
+        margin-right: $base__space-unit;
+    }
+
     .site-info {
         display: flex;
         flex-direction: column;

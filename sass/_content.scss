@@ -7,11 +7,36 @@
 
 .site-content {
 	@include desktop {
-		margin: ($base__space-unit * 3) 15rem $base__space-unit;
+		margin: ($base__space-unit * 1.5) 10rem $base__space-unit;
 		position: relative;
 		font-family: 'Exo';
 
 		.entry-content {
+
+			&:before,
+			&:after {
+				color: $color__main-brand;
+				font-family: 'FontAwesome';
+				font-size: 8rem;
+				line-height: 1rem;
+				position: absolute;
+				top: 0;
+			}
+
+			&:before {
+				content: '\f10d';
+				left: -9rem;
+				top: 6.5rem;
+			}
+
+			&:after {
+				content: '\f10e';
+				right: -9rem;
+				top: 6.5rem;
+			}
+		}
+
+		.content-area {
 
 			&:before,
 			&:after {
@@ -81,6 +106,7 @@
 	.entry-content {
 		p {
 			font-size: 1.25rem;
+
 			font-family: 'Exo';
 
 			@include tablet {
@@ -104,8 +130,13 @@
 	.entry-title {
 		display: inline;
 		font-size: 1.25rem;
-		font-weight: normal;
+		font-weight: 400;
 		margin-bottom: 0;
+	}
+
+	.entry-author {
+		font-size: 1.25rem;
+		font-weight: 400;
 	}
 
 	.source {
@@ -117,4 +148,35 @@
 .page-links {
 	clear: both;
 	margin: 0 0 $base__space-unit;
+}
+
+.page-archives-posts,
+.page-archives-categories,
+.page-archives-tags {
+	font-family: 'Exo', sans-serif;
+
+	ul {
+		list-style: none;
+		margin-left: 0;
+		padding-left: 0;
+		display: flex;
+		flex-flow: row wrap;
+
+		li {
+			font-size: 1rem;
+			margin-bottom: $base__space-unit / 3;
+			margin-right: $base__space-unit * .5;
+
+			@include tablet {
+				font-size: 1.25rem;
+			}
+
+		}
+	}
+}
+
+.tag-cloud-link {
+	@include tablet {
+		font-size: 1.25rem !important;
+	}
 }
