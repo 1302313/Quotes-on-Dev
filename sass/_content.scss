@@ -93,6 +93,10 @@
 
 	.entry-meta {
 		margin-bottom: ($base__space-unit * 2);
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: flex-start;
+		align-items: center;
 	}
 
 	.entry-title {
