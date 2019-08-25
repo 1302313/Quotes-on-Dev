@@ -7,8 +7,9 @@
 
 .site-content {
 	@include desktop {
-		// margin: ($base__space-unit * 3) 3rem $base__space-unit;
+		margin: ($base__space-unit * 3) 10rem $base__space-unit;
 		position: relative;
+		font-family: 'Exo';
 
 		.entry-content {
 
@@ -24,12 +25,12 @@
 
 			&:before {
 				content: '\f10d';
-				left: -4rem;
+				left: -2rem;
 			}
 
 			&:after {
 				content: '\f10e';
-				right: -4rem;
+				right: 3rem;
 			}
 		}
 	}
@@ -78,6 +79,7 @@
 	.entry-content {
 		p {
 			font-size: 1.25rem;
+			font-family: 'Exo';
 
 			@include tablet {
 				font-size: 1.75rem;

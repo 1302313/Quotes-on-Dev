@@ -11,24 +11,30 @@ footer {
 
         @include tablet {
             flex-flow: row wrap;
-            display: flex;
             align-items: center;
+            justify-content: flex-start;
 
 
             .main-navigation {
-                flex: 24%;
+                flex: 25%;
                 display: flex;
-                justify-content: flex-end;
+                justify-content: flex-start;
+
+
 
                 ul {
-
-                    li {
+                    &:last-child {
                         border-right: 1px solid #fff;
+                    }
+
+                    li:last-child {
+                        margin-right: 0;
                     }
                 }
 
                 .copyright-container {
-                    flex: 50%;
+                    flex: 60%;
+
 
                     .copyright {}
                 }

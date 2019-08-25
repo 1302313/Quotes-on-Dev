@@ -6,5 +6,38 @@
 
 /* About Page */
 
+/* Single Quote Page */
+
+.single-post-navigation {
+
+    .post-navigation {
+
+        .nav-links {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: flex-start;
+
+            .nav-previous {
+                width: 25%;
+
+                &:before {
+                    content: quote($string: "Previous => ");
+                    color: rgb(134, 227, 88);
+                }
+            }
+
+            .nav-next {
+                width: 25%;
+
+                &:before {
+                    content: quote($string: "Next => ");
+                    color: rgb(134, 227, 88);
+
+                }
+            }
+        }
+    }
+}
+
 
 /* Submit a Quote Page */

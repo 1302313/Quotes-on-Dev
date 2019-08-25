@@ -11,15 +11,15 @@ $source = 		get_post_meta(get_the_ID(), '_qod_quote_source', true);
 $source_url = 	get_post_meta(get_the_ID(), '_qod_quote_source_url', true);
 
 ?>
-
+<!-- Main Article Body -->
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<div class="entry-content">
 		<?php the_content(); ?>
 	</div>
 	<!-- Post Meta -->
 	<div class="entry-meta">
-		<h2 class="entry-author">&mdash;
-			<?php the_title(); ?>
+		<h2 class="entry-author">
+			&mdash;<?php the_title(); ?>
 		</h2>
 
 		<!-- Check if source URL exists -->

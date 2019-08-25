@@ -218,6 +218,37 @@ td,
 th {
   padding: 0; }
 
+/*--------------------------------------------------------------
+# Embedded Fonts
+--------------------------------------------------------------*/
+@font-face {
+  font-family: 'Exo';
+  src: url("/fonts/Exo-Light.eot");
+  src: url("/fonts/Exo-Light.eot?#iefix") format("embedded-opentype"), url("/fonts/Exo-Light.woff2") format("woff2"), url("/fonts/Exo-Light.woff") format("woff"), url("/fonts/Exo-Light.ttf") format("truetype"), url("/fonts/Exo-Light.svg#Exo-Light") format("svg");
+  font-weight: 300;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Exo';
+  src: url("/fonts/Exo-MediumItalic.eot");
+  src: url("/fonts/Exo-MediumItalic.eot?#iefix") format("embedded-opentype"), url("/fonts/Exo-MediumItalic.woff2") format("woff2"), url("/fonts/Exo-MediumItalic.woff") format("woff"), url("/fonts/Exo-MediumItalic.ttf") format("truetype"), url("/fonts/Exo-MediumItalic.svg#Exo-MediumItalic") format("svg");
+  font-weight: 500;
+  font-style: italic; }
+
+@font-face {
+  font-family: 'Exo';
+  src: url("/fonts/Exo-Medium.eot");
+  src: url("/fonts/Exo-Medium.eot?#iefix") format("embedded-opentype"), url("/fonts/Exo-Medium.woff2") format("woff2"), url("/fonts/Exo-Medium.woff") format("woff"), url("/fonts/Exo-Medium.ttf") format("truetype"), url("/fonts/Exo-Medium.svg#Exo-Medium") format("svg");
+  font-weight: 500;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Exo';
+  src: url("/fonts/Exo-LightItalic.eot");
+  src: url("/fonts/Exo-LightItalic.eot?#iefix") format("embedded-opentype"), url("/fonts/Exo-LightItalic.woff2") format("woff2"), url("/fonts/Exo-LightItalic.woff") format("woff"), url("/fonts/Exo-LightItalic.ttf") format("truetype"), url("/fonts/Exo-LightItalic.svg#Exo-LightItalic") format("svg");
+  font-weight: 300;
+  font-style: italic; }
+
 .site-header {
   margin-top: 3rem; }
 
@@ -242,9 +273,6 @@ th {
         justify-self: center; } }
 
 /*--------------------------------------------------------------
-# Embedded Fonts
---------------------------------------------------------------*/
-/*--------------------------------------------------------------
 # Typography
 --------------------------------------------------------------*/
 body,
@@ -253,7 +281,7 @@ input,
 select,
 textarea {
   color: #fff;
-  font-family: "Exo-light", times;
+  font-family: "Exo", times;
   font-size: 1rem;
   line-height: 1.5; }
 
@@ -264,7 +292,8 @@ h3,
 h4,
 h5,
 h6 {
-  clear: both; }
+  clear: both;
+  font-family: 'Exo'; }
 
 h1 {
   font-size: 2em;
@@ -288,7 +317,7 @@ address {
 
 pre {
   background: #eee;
-  font-family: "Courier 10 Pitch", Courier, monospace;
+  font-family: "Exo", "Courier 10 Pitch", Courier, monospace;
   font-size: .9375rem;
   line-height: 1.6;
   margin-bottom: 1.6rem;
@@ -322,8 +351,9 @@ big {
 html {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  font-size: 1rem;
-  height: 100vh; }
+  font-size: 16px;
+  height: 100vh;
+  width: 100vw; }
 
 *,
 *:before,
@@ -554,28 +584,30 @@ footer .site-info {
       -webkit-box-direction: normal;
           -ms-flex-flow: row wrap;
               flex-flow: row wrap;
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
       -webkit-box-align: center;
           -ms-flex-align: center;
-              align-items: center; }
+              align-items: center;
+      -webkit-box-pack: start;
+          -ms-flex-pack: start;
+              justify-content: flex-start; }
       footer .site-info .main-navigation {
-        -webkit-box-flex: 24%;
-            -ms-flex: 24%;
-                flex: 24%;
+        -webkit-box-flex: 25%;
+            -ms-flex: 25%;
+                flex: 25%;
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
-        -webkit-box-pack: end;
-            -ms-flex-pack: end;
-                justify-content: flex-end; }
-        footer .site-info .main-navigation ul li {
+        -webkit-box-pack: start;
+            -ms-flex-pack: start;
+                justify-content: flex-start; }
+        footer .site-info .main-navigation ul:last-child {
           border-right: 1px solid #fff; }
+        footer .site-info .main-navigation ul li:last-child {
+          margin-right: 0; }
         footer .site-info .main-navigation .copyright-container {
-          -webkit-box-flex: 50%;
-              -ms-flex: 50%;
-                  flex: 50%; } }
+          -webkit-box-flex: 60%;
+              -ms-flex: 60%;
+                  flex: 60%; } }
   footer .site-info .main-navigation ul {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -685,7 +717,9 @@ footer .site-info {
 /* Main Brand Quotes */
 @media (min-width: 1075px) {
   .site-content {
-    position: relative; }
+    margin: 4.5rem 10rem 1.5rem;
+    position: relative;
+    font-family: 'Exo'; }
     .site-content .entry-content:before, .site-content .entry-content:after {
       color: #0c0;
       font-family: 'FontAwesome';
@@ -695,10 +729,10 @@ footer .site-info {
       top: 0; }
     .site-content .entry-content:before {
       content: '\f10d';
-      left: -4rem; }
+      left: -2rem; }
     .site-content .entry-content:after {
       content: '\f10e';
-      right: -4rem; } }
+      right: 3rem; } }
 
 /* Posts and pages */
 .sticky {
@@ -728,7 +762,8 @@ footer .site-info {
 .blog .entry-content p,
 .single .entry-content p,
 .archive .entry-content p {
-  font-size: 1.25rem; }
+  font-size: 1.25rem;
+  font-family: 'Exo'; }
   @media (min-width: 620px) {
     .blog .entry-content p,
     .single .entry-content p,
@@ -785,4 +820,27 @@ object {
 --------------------------------------------------------------*/
 /* All Archives Page */
 /* About Page */
+/* Single Quote Page */
+.single-post-navigation .post-navigation .nav-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start; }
+  .single-post-navigation .post-navigation .nav-links .nav-previous {
+    width: 25%; }
+    .single-post-navigation .post-navigation .nav-links .nav-previous:before {
+      content: "Previous => ";
+      color: #86e358; }
+  .single-post-navigation .post-navigation .nav-links .nav-next {
+    width: 25%; }
+    .single-post-navigation .post-navigation .nav-links .nav-next:before {
+      content: "Next => ";
+      color: #86e358; }
+
 /* Submit a Quote Page */

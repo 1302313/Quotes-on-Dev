@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Template part for displaying single posts.
  *
@@ -8,15 +9,24 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+	<!-- .entry-header -->
 	<header class="entry-header">
-		<?php if ( has_post_thumbnail() ) : ?>
-			<?php the_post_thumbnail( 'large' ); ?>
+		<?php if (has_post_thumbnail()) : ?>
+
+		<?php the_post_thumbnail('large'); ?>
+
 		<?php endif; ?>
+	</header>
 
-		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-	</header><!-- .entry-header -->
-
+	<!-- .entry-content -->
 	<div class="entry-content">
-		<?php the_content(); ?>
-	</div><!-- .entry-content -->
+
+		<div class="entry-content">
+			<?php the_content(); ?>
+		</div>
+
+	</div>
+	<h2 class="entry-author">
+		&mdash;<?php the_title(); ?>
+	</h2>
 </article><!-- #post-## -->
