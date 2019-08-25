@@ -735,6 +735,8 @@ footer .site-info {
 .container {
   padding: 2.5%;
   width: 100%;
+  max-width: 1080px;
+  margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -973,3 +975,34 @@ object {
     color: #86e358; }
 
 /* Submit a Quote Page */
+.quote-submission {
+  margin: 0 2rem; }
+  .quote-submission:before, .quote-submission:after {
+    color: #0c0;
+    font-family: 'FontAwesome';
+    font-size: 8rem;
+    line-height: 1rem;
+    position: absolute;
+    top: 0; }
+  .quote-submission:before {
+    content: '\f10d';
+    left: -9rem;
+    top: 5rem; }
+  .quote-submission:after {
+    content: '\f10e';
+    right: -9rem;
+    top: 5rem; }
+  .quote-submission .page-submit-wrapper .quote-submission-form-content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column wrap;
+            flex-flow: column wrap;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    margin: 0 0 1.5rem 0; }
+    .quote-submission .page-submit-wrapper .quote-submission-form-content label {
+      margin-bottom: 0.5rem; }
