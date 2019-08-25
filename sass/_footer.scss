@@ -6,11 +6,12 @@ footer {
     .site-info {
         display: flex;
         flex-direction: column;
-        align-items: center;
+        align-items: flex-start;
         margin: ($base__space-unit * 3) 0 ($base__space-unit * 2);
 
         //  Mobile
         .main-navigation {
+            width: none;
 
             ul {
                 display: flex;
@@ -32,16 +33,15 @@ footer {
         }
 
         .copyright-container {
-            width: 100%;
+            // width: 100%;
             margin: 0.5rem 0 0rem;
+            display: flex;
+            flex: row wrap;
+            justify-content: flex-start;
+            align-items: center;
+
 
             .copyright {
-                width: 100%;
-                display: flex;
-                flex: row wrap;
-                justify-content: flex-start;
-                align-items: center;
-                margin: auto 0;
 
                 a {
                     margin-left: 0.5rem;
@@ -53,40 +53,45 @@ footer {
 
         // Footer Tablet
         @include tablet {
+            display: flex;
             flex-flow: row wrap;
             align-items: center;
             justify-content: flex-start;
 
 
             .main-navigation {
-                // flex: 50%;
-                max-width: 40%;
-                display: flex;
-                justify-content: flex-start;
 
-
+                width: none;
 
                 ul {
                     &:last-child {
                         border-right: 1px solid #fff;
+                        padding-left: 0rem;
+
                     }
 
                     li:last-child {
                         margin-right: 0;
+
                     }
                 }
             }
 
             .copyright-container {
-                flex: 2 0 50%;
-                width: 50%;
+
+                margin-left: 1rem;
 
 
-                .copyright {
-                    width: 100%;
 
-                }
+
+                .copyright {}
             }
+        }
+
+        @include desktop {
+            justify-content: flex-end;
+
+            .main-navigation {}
         }
 
     }

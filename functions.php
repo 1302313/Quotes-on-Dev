@@ -62,6 +62,7 @@ function qod_scripts()
 {
 	// Add Styles to Header
 	wp_enqueue_style('qod-style', get_stylesheet_uri());
+	wp_enqueue_style('qod-font', 'https://fonts.googleapis.com/css?family=Exo:300,300i,400,400i,500,500i&display=swap');
 	// Add Scripts to Header
 	wp_enqueue_script('jquery');
 	wp_enqueue_script('qod-script', get_template_directory_uri() . '/build/js/qod.min.js', array('jquery'), '', true);

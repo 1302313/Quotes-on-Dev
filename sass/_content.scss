@@ -7,7 +7,7 @@
 
 .site-content {
 	@include desktop {
-		margin: ($base__space-unit * 3) 10rem $base__space-unit;
+		margin: ($base__space-unit * 3) 15rem $base__space-unit;
 		position: relative;
 		font-family: 'Exo';
 
@@ -17,7 +17,7 @@
 			&:after {
 				color: $color__main-brand;
 				font-family: 'FontAwesome';
-				font-size: 5rem;
+				font-size: 8rem;
 				line-height: 1rem;
 				position: absolute;
 				top: 0;
@@ -25,12 +25,14 @@
 
 			&:before {
 				content: '\f10d';
-				left: -2rem;
+				left: -9rem;
+				top: 6.5rem;
 			}
 
 			&:after {
 				content: '\f10e';
-				right: 3rem;
+				right: -9rem;
+				top: 6.5rem;
 			}
 		}
 	}
