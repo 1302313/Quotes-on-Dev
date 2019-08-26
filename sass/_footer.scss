@@ -1,11 +1,9 @@
 /* Site Footer Design */
 
-// Main Navigation Block
-
 footer {
     @include desktop {
         align-self: flex-end;
-        margin-right: $base__space-unit;
+        margin-right: $base__space-unit * 2;
     }
 
     .site-info {
@@ -33,71 +31,55 @@ footer {
                     border-right: 1px solid #fff;
                     padding-right: $base__space-unit - 0.5;
                 }
-
             }
         }
 
         .copyright-container {
-            // width: 100%;
+
             margin: 0.5rem 0 0rem;
             display: flex;
             flex: row wrap;
             justify-content: flex-start;
             align-items: center;
 
-
             .copyright {
 
                 a {
                     margin-left: 0.5rem;
-
                 }
             }
-
         }
 
-        // Footer Tablet
+        // Tablet
         @include tablet {
             display: flex;
             flex-flow: row wrap;
             align-items: center;
             justify-content: flex-start;
 
-
             .main-navigation {
-
                 width: none;
 
                 ul {
                     &:last-child {
                         border-right: 1px solid #fff;
                         padding-left: 0rem;
-
                     }
 
                     li:last-child {
                         margin-right: 0;
-
                     }
                 }
             }
 
             .copyright-container {
-
                 margin-left: 1rem;
-
-
-
-
-                .copyright {}
             }
         }
 
+        // Desktop
         @include desktop {
             justify-content: flex-end;
-
-            .main-navigation {}
         }
-
     }
 }

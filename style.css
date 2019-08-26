@@ -606,7 +606,7 @@ a {
   footer {
     -ms-flex-item-align: end;
         align-self: flex-end;
-    margin-right: 1.5rem; } }
+    margin-right: 3rem; } }
 
 footer .site-info {
   display: -webkit-box;
