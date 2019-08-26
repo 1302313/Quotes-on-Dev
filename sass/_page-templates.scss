@@ -4,11 +4,14 @@
 
 /* All Archives Page */
 
+
+
 /* About Page */
 
 .page-about {
-
-    margin: 0 2rem;
+    @include desktop {
+        margin: 0 1rem;
+    }
 
     &:before,
     &:after {
@@ -67,6 +70,12 @@
     }
 }
 
+/* Archives Page */
+
+.page-archives-post-title {
+    margin-bottom: $base__space-unit;
+}
+
 
 /* Submit a Quote Page */
 
@@ -99,6 +108,10 @@
 
     .page-submit-wrapper {
 
+        h1 {
+            margin-bottom: $base__space-unit;
+        }
+
         .quote-submission-form-content {
             display: flex;
             flex-flow: column wrap;
@@ -110,6 +123,8 @@
             }
         }
 
-        .submit-button {}
+        .submit-button {
+            margin-top: $base__space-unit;
+        }
     }
 }

@@ -5,6 +5,7 @@
 .logo-container {
     display: flex;
     flex-flow: row wrap;
+    margin-bottom: $base__space-unit;
 
     .logo {
         width: 19rem;
@@ -19,5 +20,42 @@
             width: 44rem;
             justify-self: center;
         }
+
+        path {
+            fill: rgba(0, 0, 0, 1.0);
+            stroke: rgba(0, 0, 0, 0.5);
+
+
+            animation: path-anim 5.0s linear;
+        }
+
+        @keyframes path-anim {
+            0% {
+
+                fill: rgba(0, 0, 0, 0.0);
+                stroke: rgba(0, 0, 0, 1.0);
+                text-shadow: 0px 0px 0px #0c0;
+            }
+
+            50% {
+                fill: rgba(0, 0, 0, 0.0);
+                stroke: rgba(0, 0, 0, 1.0);
+                text-shadow: 0px 0px 0px #0c0;
+            }
+
+            75% {
+                fill: rgba(0, 0, 0, 0.5);
+                stroke: rgba(0, 0, 0, 0.5);
+                text-shadow: 5px 5px 10px #0c0;
+            }
+
+            100% {
+                stroke-dashoffset: 0%;
+                fill: rgba(0, 0, 0, 1.0);
+                stroke: rgba(0, 0, 0, 0.0);
+                text-shadow: 10px 10px 20px #0c0;
+            }
+        }
+
     }
 }

@@ -7,26 +7,30 @@
  */
 
 // Get from post meta table, source
-$source = 		get_post_meta(get_the_ID(), '_qod_quote_source', true);
-$source_url = 	get_post_meta(get_the_ID(), '_qod_quote_source_url', true);
+$source = get_post_meta(get_the_ID(), '_qod_quote_source', true);
+$source_url = get_post_meta(get_the_ID(), '_qod_quote_source_url', true);
 
 ?>
 <!-- Main Article Body -->
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+	<!-- Quote -->
 	<div class="entry-content">
 		<?php the_content(); ?>
 	</div>
+
 	<!-- Post Meta -->
 	<div class="entry-meta">
 		<h2 class="entry-author">
-			&mdash;<?php the_title(); ?>
+			&mdash; <?php the_title(); ?>
 		</h2>
 
 		<!-- Check if source URL exists -->
 		<?php if ($source && $source_url) : ?>
 
-		<span>,
-			<a class="source" href="<?php echo $source_url; ?>"><?php echo $source; ?></a>
+		<span class="source"> ,
+			<a class="source-url" href="<?php echo $source_url; ?>">
+				<?php echo $source; ?>
+			</a>
 		</span>
 
 		<!-- else, Check if source exists -->

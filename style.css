@@ -223,29 +223,29 @@ th {
 --------------------------------------------------------------*/
 @font-face {
   font-family: 'Exo';
-  src: url("/fonts/Exo-Light.eot");
-  src: url("/fonts/Exo-Light.eot?#iefix") format("embedded-opentype"), url("/fonts/Exo-Light.woff2") format("woff2"), url("/fonts/Exo-Light.woff") format("woff"), url("/fonts/Exo-Light.ttf") format("truetype"), url("/fonts/Exo-Light.svg#Exo-Light") format("svg");
+  src: url("../fonts/Exo-Light.eot");
+  src: url("../fonts/Exo-Light.eot?#iefix") format("embedded-opentype"), url("../fonts/Exo-Light.woff2") format("woff2"), url("../fonts/Exo-Light.woff") format("woff"), url("../fonts/Exo-Light.ttf") format("truetype"), url("../fonts/Exo-Light.svg#Exo-Light") format("svg");
   font-weight: 300;
   font-style: normal; }
 
 @font-face {
   font-family: 'Exo';
-  src: url("/fonts/Exo-MediumItalic.eot");
-  src: url("/fonts/Exo-MediumItalic.eot?#iefix") format("embedded-opentype"), url("/fonts/Exo-MediumItalic.woff2") format("woff2"), url("/fonts/Exo-MediumItalic.woff") format("woff"), url("/fonts/Exo-MediumItalic.ttf") format("truetype"), url("/fonts/Exo-MediumItalic.svg#Exo-MediumItalic") format("svg");
+  src: url("../fonts/Exo-MediumItalic.eot");
+  src: url("../fonts/Exo-MediumItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/Exo-MediumItalic.woff2") format("woff2"), url("../fonts/Exo-MediumItalic.woff") format("woff"), url("../fonts/Exo-MediumItalic.ttf") format("truetype"), url("../fonts/Exo-MediumItalic.svg#Exo-MediumItalic") format("svg");
   font-weight: 500;
   font-style: italic; }
 
 @font-face {
   font-family: 'Exo';
-  src: url("/fonts/Exo-Medium.eot");
-  src: url("/fonts/Exo-Medium.eot?#iefix") format("embedded-opentype"), url("/fonts/Exo-Medium.woff2") format("woff2"), url("/fonts/Exo-Medium.woff") format("woff"), url("/fonts/Exo-Medium.ttf") format("truetype"), url("/fonts/Exo-Medium.svg#Exo-Medium") format("svg");
+  src: url("../fonts/Exo-Medium.eot");
+  src: url("../fonts/Exo-Medium.eot?#iefix") format("embedded-opentype"), url("../fonts/Exo-Medium.woff2") format("woff2"), url("../fonts/Exo-Medium.woff") format("woff"), url("../fonts/Exo-Medium.ttf") format("truetype"), url("../fonts/Exo-Medium.svg#Exo-Medium") format("svg");
   font-weight: 500;
   font-style: normal; }
 
 @font-face {
   font-family: 'Exo';
-  src: url("/fonts/Exo-LightItalic.eot");
-  src: url("/fonts/Exo-LightItalic.eot?#iefix") format("embedded-opentype"), url("/fonts/Exo-LightItalic.woff2") format("woff2"), url("/fonts/Exo-LightItalic.woff") format("woff"), url("/fonts/Exo-LightItalic.ttf") format("truetype"), url("/fonts/Exo-LightItalic.svg#Exo-LightItalic") format("svg");
+  src: url("../fonts/Exo-LightItalic.eot");
+  src: url("../fonts/Exo-LightItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/Exo-LightItalic.woff2") format("woff2"), url("../fonts/Exo-LightItalic.woff") format("woff"), url("../fonts/Exo-LightItalic.ttf") format("truetype"), url("../fonts/Exo-LightItalic.svg#Exo-LightItalic") format("svg");
   font-weight: 300;
   font-style: italic; }
 
@@ -259,7 +259,8 @@ th {
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-flow: row wrap;
-          flex-flow: row wrap; }
+          flex-flow: row wrap;
+  margin-bottom: 1.5rem; }
   .logo-container .logo {
     width: 19rem;
     justify-self: flex-end; }
@@ -271,6 +272,57 @@ th {
         margin: 0 auto;
         width: 44rem;
         justify-self: center; } }
+    .logo-container .logo path {
+      fill: black;
+      stroke: rgba(0, 0, 0, 0.5);
+      -webkit-animation: path-anim 5.0s linear;
+              animation: path-anim 5.0s linear; }
+
+@-webkit-keyframes path-anim {
+  0% {
+    fill: rgba(0, 0, 0, 0);
+    stroke: black;
+    text-shadow: 0px 0px 0px #0c0; }
+  50% {
+    fill: rgba(0, 0, 0, 0);
+    stroke: black;
+    text-shadow: 0px 0px 0px #0c0; }
+  75% {
+    fill: rgba(0, 0, 0, 0.5);
+    stroke: rgba(0, 0, 0, 0.5);
+    text-shadow: 5px 5px 10px #0c0; }
+  100% {
+    stroke-dashoffset: 0%;
+    fill: black;
+    stroke: rgba(0, 0, 0, 0);
+    text-shadow: 10px 10px 20px #0c0; } }
+
+@keyframes path-anim {
+  0% {
+    fill: rgba(0, 0, 0, 0);
+    stroke: black;
+    text-shadow: 0px 0px 0px #0c0; }
+  50% {
+    fill: rgba(0, 0, 0, 0);
+    stroke: black;
+    text-shadow: 0px 0px 0px #0c0; }
+  75% {
+    fill: rgba(0, 0, 0, 0.5);
+    stroke: rgba(0, 0, 0, 0.5);
+    text-shadow: 5px 5px 10px #0c0; }
+  100% {
+    stroke-dashoffset: 0%;
+    fill: black;
+    stroke: rgba(0, 0, 0, 0);
+    text-shadow: 10px 10px 20px #0c0; } }
+
+.main-svg {
+  background: red;
+  fill: antiquewhite; }
+  .main-svg .path-group-svg path {
+    background: #d81616 !important; }
+  .main-svg .path-group-svg .o-svg {
+    fill: #00CC00 !important; }
 
 /*--------------------------------------------------------------
 # Typography
@@ -363,7 +415,7 @@ html {
           box-sizing: inherit; }
 
 body {
-  background: #222;
+  background: #222222;
   /* Fallback for when there is no custom background color defined. */ }
 
 blockquote,
@@ -425,9 +477,9 @@ input[type="submit"] {
   border: 2px solid #0c0;
   border-color: #0c0;
   border-radius: 3px;
-  background: #222;
+  background: transparent;
   color: #0c0;
-  font-size: 1.25rem;
+  font-size: 1rem;
   font-weight: 700;
   line-height: 1;
   padding: 0.75rem 2.25rem; }
@@ -458,6 +510,15 @@ input[type="submit"] {
     border-color: #0c0 #1c9944 #097427;
     -webkit-box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.5), inset 0 15px 17px rgba(184, 233, 170, 0.8);
             box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.5), inset 0 15px 17px rgba(184, 233, 170, 0.8); }
+  @media (min-width: 620px) {
+    button,
+    button:active,
+    button:focus,
+    button:hover,
+    input[type="button"],
+    input[type="reset"],
+    input[type="submit"] {
+      font-size: 1.25rem; } }
 
 /* Fields */
 input[type="text"],
@@ -469,7 +530,7 @@ textarea {
   color: #fff;
   background: transparent;
   font-weight: 500;
-  border: 2px solid #0c0;
+  border: 2px solid #00cc00;
   border-radius: 3px; }
   input[type="text"]:hover,
   input[type="email"]:hover,
@@ -495,6 +556,14 @@ textarea {
     border-color: #0c0 #1c9944 #097427;
     -webkit-box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.5), inset 0 15px 17px rgba(184, 233, 170, 0.8);
             box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.5), inset 0 15px 17px rgba(184, 233, 170, 0.8); }
+  @media (min-width: 620px) {
+    input[type="text"],
+    input[type="email"],
+    input[type="url"],
+    input[type="password"],
+    input[type="search"],
+    textarea {
+      font-size: 1.25rem; } }
 
 .search-submit {
   border: none; }
@@ -519,7 +588,8 @@ input[type="email"],
 input[type="url"],
 input[type="password"],
 input[type="search"] {
-  padding: 3px; }
+  padding: 3px;
+  width: 60%; }
 
 textarea {
   padding: 0.5rem 0.5rem;
@@ -531,11 +601,11 @@ textarea {
 /* Links */
 a {
   text-decoration: none;
-  color: #0c0; }
+  color: #090; }
   a:visited {
     color: #0c0; }
   a:hover, a:focus, a:active {
-    color: #090; }
+    color: #a9eca9; }
   a:focus {
     outline: thin dotted; }
   a:hover, a:active {
@@ -590,16 +660,10 @@ a {
   margin: 0 0 1.5rem;
   overflow: hidden; }
 
-.comment-navigation .nav-previous,
-.posts-navigation .nav-previous,
-.post-navigation .nav-previous {
-  width: 50%; }
-
 .comment-navigation .nav-next,
 .posts-navigation .nav-next,
 .post-navigation .nav-next {
-  text-align: right;
-  width: 50%; }
+  text-align: right; }
 
 /* Site Footer Design */
 @media (min-width: 1080px) {
@@ -619,7 +683,7 @@ footer .site-info {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  margin: 4.5rem 0 3rem; }
+  margin: 3rem 0 3rem; }
   footer .site-info .main-navigation {
     width: none; }
     footer .site-info .main-navigation ul {
@@ -770,7 +834,7 @@ footer .site-info {
     position: relative;
     font-family: 'Exo'; }
     .site-content .entry-content:before, .site-content .entry-content:after {
-      color: #0c0;
+      color: #00cc00;
       font-family: 'FontAwesome';
       font-size: 8rem;
       line-height: 1rem;
@@ -785,7 +849,7 @@ footer .site-info {
       right: -9rem;
       top: 6.5rem; }
     .site-content .content-area:before, .site-content .content-area:after {
-      color: #0c0;
+      color: #00cc00;
       font-family: 'FontAwesome';
       font-size: 8rem;
       line-height: 1rem;
@@ -938,23 +1002,27 @@ object {
 --------------------------------------------------------------*/
 /* All Archives Page */
 /* About Page */
-.page-about {
-  margin: 0 2rem; }
-  .page-about:before, .page-about:after {
-    color: #0c0;
-    font-family: 'FontAwesome';
-    font-size: 8rem;
-    line-height: 1rem;
-    position: absolute;
-    top: 0; }
-  .page-about:before {
-    content: '\f10d';
-    left: -9rem;
-    top: 5rem; }
-  .page-about:after {
-    content: '\f10e';
-    right: -9rem;
-    top: 5rem; }
+@media (min-width: 1080px) {
+  .page-about {
+    margin: 0 1rem; } }
+
+.page-about:before, .page-about:after {
+  color: #00cc00;
+  font-family: 'FontAwesome';
+  font-size: 8rem;
+  line-height: 1rem;
+  position: absolute;
+  top: 0; }
+
+.page-about:before {
+  content: '\f10d';
+  left: -9rem;
+  top: 5rem; }
+
+.page-about:after {
+  content: '\f10e';
+  right: -9rem;
+  top: 5rem; }
 
 /* Single Quote Page */
 .single-post-navigation .post-navigation .nav-links {
@@ -974,11 +1042,15 @@ object {
     content: "Next => ";
     color: #86e358; }
 
+/* Archives Page */
+.page-archives-post-title {
+  margin-bottom: 1.5rem; }
+
 /* Submit a Quote Page */
 .quote-submission {
   margin: 0 2rem; }
   .quote-submission:before, .quote-submission:after {
-    color: #0c0;
+    color: #00cc00;
     font-family: 'FontAwesome';
     font-size: 8rem;
     line-height: 1rem;
@@ -992,6 +1064,8 @@ object {
     content: '\f10e';
     right: -9rem;
     top: 5rem; }
+  .quote-submission .page-submit-wrapper h1 {
+    margin-bottom: 1.5rem; }
   .quote-submission .page-submit-wrapper .quote-submission-form-content {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1006,3 +1080,5 @@ object {
     margin: 0 0 1.5rem 0; }
     .quote-submission .page-submit-wrapper .quote-submission-form-content label {
       margin-bottom: 0.5rem; }
+  .quote-submission .page-submit-wrapper .submit-button {
+    margin-top: 1.5rem; }
